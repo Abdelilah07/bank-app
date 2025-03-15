@@ -16,20 +16,20 @@
                 @csrf
                 <div class="space-y-2">
                     <label class="block text-sm font-medium text-gray-700">Type</label>
-                    <select name="type" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    <select name="type" class="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-blue-500 focus:ring-blue-500">
                         <option value="deposit">Dépôt</option>
                         <option value="withdrawal">Retrait</option>
                     </select>
                 </div>
                 <div class="space-y-2">
                     <label class="block text-sm font-medium text-gray-700">Montant</label>
-                    <input type="number" name="amount" step="0.01" min="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" required>
+                    <input type="number" name="amount" step="0.01" min="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-blue-500 focus:ring-blue-500" required>
                 </div>
                 <div class="space-y-2">
                     <label class="block text-sm font-medium text-gray-700">Description</label>
-                    <textarea name="description" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" rows="3"></textarea>
+                    <textarea name="description" class="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-blue-500 focus:ring-blue-500" rows="3"></textarea>
                 </div>
-                <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors">
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors">
                     Effectuer
                 </button>
             </form>
