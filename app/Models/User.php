@@ -2,14 +2,12 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
     /**
@@ -21,6 +19,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'usertype', // Add this
     ];
 
     /**
@@ -49,5 +48,11 @@ class User extends Authenticatable
     public function compteBancaires()
     {
         return $this->hasMany(CompteBancaire::class);
+    }
+
+    // Optional: Helper method to check if user is admin
+    public function isAdmin()
+    {
+        return $this->usertype === 'admin';
     }
 }
