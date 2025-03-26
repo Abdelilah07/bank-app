@@ -35,7 +35,7 @@ class AccountController extends Controller
             'balance' => $request->balance ?? 0,
         ]);
 
-        return redirect()->route('admin.accounts.index')->with('success', 'Account created');
+        return redirect()->route('accounts.index')->with('success', 'Account created');
     }
 
     public function edit(CompteBancaire $account)
@@ -53,12 +53,12 @@ class AccountController extends Controller
         ]);
 
         $account->update($request->all());
-        return redirect()->route('admin.accounts.index')->with('success', 'Account updated');
+        return redirect()->route('accounts.index')->with('success', 'Account updated');
     }
 
     public function destroy(CompteBancaire $account)
     {
         $account->delete();
-        return redirect()->route('admin.accounts.index')->with('success', 'Account deleted');
+        return redirect()->route('accounts.index')->with('success', 'Account deleted');
     }
 }
