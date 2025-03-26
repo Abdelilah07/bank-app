@@ -11,7 +11,7 @@
             <span>Aucune transaction n'a été effectuée.</span>
         </div>
         @else
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto bg-base-100 rounded-box p-4 shadow-sm">
             <table class="table table-zebra w-full">
                 <thead>
                     <tr>

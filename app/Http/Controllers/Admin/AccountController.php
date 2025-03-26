@@ -11,7 +11,7 @@ class AccountController extends Controller
 {
     public function index()
     {
-        $accounts = CompteBancaire::with('user')->paginate(10);
+        $accounts = CompteBancaire::with('user')->paginate(3);
         return view('admin.accounts.index', compact('accounts'));
     }
 
